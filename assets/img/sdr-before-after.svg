@@ -1,0 +1,19 @@
+<svg viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="An old dusty laptop becomes a refurbished one with a checkmark">
+<rect width="600" height="300" fill="#eef1e9"/>
+<rect x="62" y="105" width="120" height="78" rx="6" fill="#dcdcdc" stroke="#9a9a9a" stroke-width="4"/>
+<path d="M105 108 l12 20 l-8 16 l10 18" fill="none" stroke="#9a9a9a" stroke-width="3"/>
+<circle cx="70" cy="85" r="6" fill="#c9c9c9"/>
+<circle cx="88" cy="76" r="8" fill="#c9c9c9"/>
+<circle cx="108" cy="84" r="5" fill="#c9c9c9"/>
+<path d="M50 186 h144 l12 14 h-168 z" fill="#9a9a9a"/>
+<polygon points="245,138 315,138 315,122 351,150 315,178 315,162 245,162" fill="#4e5944"/>
+<rect x="418" y="105" width="120" height="78" rx="6" fill="#ffffff" stroke="#4e5944" stroke-width="5"/>
+<path d="M478 165 V148" stroke="#4e5944" stroke-width="3" stroke-linecap="round"/>
+<ellipse cx="470" cy="146" rx="9" ry="5" fill="#6a7a58" transform="rotate(-30 470 146)"/>
+<ellipse cx="486" cy="146" rx="9" ry="5" fill="#4e5944" transform="rotate(30 486 146)"/>
+<path d="M406 186 h144 l12 14 h-168 z" fill="#4e5944"/>
+<circle cx="532" cy="100" r="19" fill="#4e5944"/>
+<path d="M523 100 l6 6 l12 -13" fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="122" y="248" font-family="Arial,sans-serif" font-size="18" font-weight="bold" letter-spacing="3" fill="#9a9a9a" text-anchor="middle">BEFORE</text>
+<text x="478" y="248" font-family="Arial,sans-serif" font-size="18" font-weight="bold" letter-spacing="3" fill="#4e5944" text-anchor="middle">AFTER</text>
+</svg>

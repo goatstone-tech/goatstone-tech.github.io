@@ -1,0 +1,15 @@
+<svg viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A heart rising out of an open gift box">
+<rect width="600" height="300" fill="#eef1e9"/>
+<ellipse cx="300" cy="255" rx="90" ry="8" fill="#d9e0d2"/>
+<path d="M300 132 C282 118 264 104 264 88 C264 74 275 64 288 64 C295 64 299 69 300 74 C301 69 305 64 312 64 C325 64 336 74 336 88 C336 104 318 118 300 132 Z" fill="#4e5944"/>
+<path d="M200 90 V104 M193 97 H207" stroke="#4e5944" stroke-width="4" stroke-linecap="round"/>
+<path d="M402 78 V92 M395 85 H409" stroke="#4e5944" stroke-width="4" stroke-linecap="round"/>
+<circle cx="415" cy="122" r="5" fill="#b5c1aa"/>
+<polygon points="230,180 198,148 230,148" fill="#3c4636"/>
+<polygon points="370,180 402,148 370,148" fill="#3c4636"/>
+<rect x="230" y="180" width="140" height="70" rx="4" fill="#4e5944"/>
+<rect x="293" y="180" width="14" height="70" fill="#b5c1aa"/>
+<ellipse cx="284" cy="152" rx="15" ry="10" fill="#b5c1aa" transform="rotate(-25 284 152)"/>
+<ellipse cx="316" cy="152" rx="15" ry="10" fill="#b5c1aa" transform="rotate(25 316 152)"/>
+<circle cx="300" cy="154" r="7" fill="#8a9a78"/>
+</svg>

@@ -25,6 +25,7 @@
   var list = document.getElementById('photo-list');
   var note = zone.querySelector('.drop-note');
   var MAX_BYTES = 10 * 1024 * 1024;
+  var MAX_FILES = 10;
   var store = (typeof DataTransfer !== 'undefined') ? new DataTransfer() : null;
   function totalBytes() {
     var total = 0;
@@ -42,9 +43,9 @@
     });
     if (note) {
       if (store.files.length) {
-        note.textContent = store.files.length + (store.files.length === 1 ? ' photo, ' : ' photos, ') + (totalBytes() / 1048576).toFixed(1) + ' MB total. Up to 10 MB total per message.';
+        note.textContent = store.files.length + (store.files.length === 1 ? ' photo, ' : ' photos, ') + (totalBytes() / 1048576).toFixed(1) + ' MB total. Up to 10 photos and 10 MB total per message.';
       } else {
-        note.textContent = 'Photos help us plan the pickup. Up to 10 MB total per message.';
+        note.textContent = 'Photos help us plan the pickup. Up to 10 photos and 10 MB total per message.';
       }
     }
   }
@@ -55,6 +56,7 @@
       return;
     }
     var skipped = 0;
+    var skippedCount = 0;
     Array.prototype.forEach.call(files, function (file) {
       var duplicate = false;
       Array.prototype.forEach.call(store.files, function (existing) {
@@ -65,6 +67,10 @@
       if (duplicate) {
         return;
       }
+      if (store.files.length >= MAX_FILES) {
+        skippedCount += 1;
+        return;
+      }
       if (totalBytes() + file.size > MAX_BYTES) {
         skipped += 1;
         return;
@@ -73,6 +79,9 @@
     });
     input.files = store.files;
     showFiles();
+    if (skippedCount && note) {
+      note.textContent += ' Max 10 photos per message.';
+    }
     if (skipped && note) {
       note.textContent += ' Some photos were left out: the 10 MB total was reached.';
     }

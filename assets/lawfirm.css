@@ -701,8 +701,8 @@ details.section-dropdown h3{margin:0 0 12px}
 .blog-card:hover .photo{transform:scale(1.3) rotate(3deg)}
 .blog-card .meta{position:relative;z-index:0;height:200px}
 .blog-card .photo{position:absolute;top:0;right:0;bottom:0;left:0;background-size:cover;background-position:center;transition:transform .2s}
-.blog-card .photo.contain{background-size:contain;background-color:#fff;background-repeat:no-repeat}
-.blog-card:hover .photo.contain{transform:none}
+.blog-card .photo.contain{background-size:contain !important;background-color:#fff;background-repeat:no-repeat;background-position:center}
+.blog-card:hover .photo.contain{transform:none !important}
 .blog-card .details,.blog-card .details ul{margin:auto;padding:0;list-style:none}
 .blog-card .details{position:absolute;top:0;bottom:0;left:-100%;margin:auto;transition:left .2s;background:rgba(0,0,0,.6);color:#fff;padding:10px;width:100%;font-size:.9rem}
 .blog-card .details .author{color:#fff}

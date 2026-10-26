@@ -1,0 +1,16 @@
+<svg viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A certificate with a seal next to a drive">
+<rect width="600" height="300" fill="#eef1e9"/>
+<rect x="90" y="150" width="80" height="50" rx="6" fill="#ffffff" stroke="#4e5944" stroke-width="4"/>
+<circle cx="118" cy="175" r="12" fill="none" stroke="#b5c1aa" stroke-width="4"/>
+<rect x="200" y="60" width="200" height="180" rx="6" fill="#ffffff" stroke="#4e5944" stroke-width="5"/>
+<text x="300" y="90" font-family="Arial,sans-serif" font-size="16" font-weight="bold" letter-spacing="2" fill="#4e5944" text-anchor="middle">CERTIFICATE</text>
+<rect x="225" y="105" width="150" height="8" rx="4" fill="#d9e0d2"/>
+<rect x="225" y="125" width="150" height="8" rx="4" fill="#d9e0d2"/>
+<rect x="225" y="145" width="110" height="8" rx="4" fill="#d9e0d2"/>
+<circle cx="370" cy="200" r="26" fill="#4e5944"/>
+<path d="M359 200 l8 8 l14 -16" fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="358,222 346,246 366,238" fill="#3c4636"/>
+<polygon points="382,222 394,246 374,238" fill="#3c4636"/>
+<circle cx="480" cy="110" r="22" fill="#4e5944"/>
+<path d="M470 110 l7 7 l15 -16" fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

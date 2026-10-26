@@ -1,0 +1,20 @@
+<svg viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Three tiles for Sell, Donate, Reuse">
+<defs>
+<marker id="arr2" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+<path d="M0 0 L10 5 L0 10 z" fill="#4e5944"/>
+</marker>
+</defs>
+<rect width="600" height="300" fill="#eef1e9"/>
+<rect x="55" y="50" width="150" height="150" rx="18" fill="#ffffff" stroke="#4e5944" stroke-width="4"/>
+<rect x="225" y="50" width="150" height="150" rx="18" fill="#ffffff" stroke="#4e5944" stroke-width="4"/>
+<rect x="395" y="50" width="150" height="150" rx="18" fill="#ffffff" stroke="#4e5944" stroke-width="4"/>
+<circle cx="130" cy="125" r="34" fill="#d9e0d2" stroke="#4e5944" stroke-width="4"/>
+<circle cx="130" cy="125" r="25" fill="none" stroke="#4e5944" stroke-width="2" opacity="0.5"/>
+<text x="130" y="139" font-family="Arial,sans-serif" font-size="40" font-weight="bold" fill="#4e5944" text-anchor="middle">$</text>
+<path d="M300 148 C282 134 264 120 264 100 C264 84 276 74 290 74 C297 74 300 79 300 85 C300 79 303 74 310 74 C324 74 336 84 336 100 C336 120 318 134 300 148 Z" fill="#4e5944"/>
+<path d="M447 111 A26 26 0 1 1 493 137" fill="none" stroke="#4e5944" stroke-width="6" stroke-linecap="round" marker-end="url(#arr2)"/>
+<path d="M493 137 A26 26 0 1 1 447 111" fill="none" stroke="#4e5944" stroke-width="6" stroke-linecap="round" marker-end="url(#arr2)"/>
+<text x="130" y="236" font-family="Arial,sans-serif" font-size="20" font-weight="bold" letter-spacing="3" fill="#4e5944" text-anchor="middle">SELL</text>
+<text x="300" y="236" font-family="Arial,sans-serif" font-size="20" font-weight="bold" letter-spacing="3" fill="#4e5944" text-anchor="middle">DONATE</text>
+<text x="470" y="236" font-family="Arial,sans-serif" font-size="20" font-weight="bold" letter-spacing="3" fill="#4e5944" text-anchor="middle">REUSE</text>
+</svg>

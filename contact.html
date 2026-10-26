@@ -5,8 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Contact; GOATSTONE TECH</title>
 <link rel="stylesheet" href="assets/lawfirm.css" type="text/css">
-  <script src="https://forminit.com/sdk/v1/forminit.js" defer></script>
-  <script src="assets/site.js?v=8" defer></script>
+  <script src="assets/site.js?v=9" defer></script>
 </head>
 <body>
 <div id="header">
@@ -51,25 +50,17 @@
 </div>
 <div class="main">
 <h1>Contact</h1>
-<p>You can send a picture with basic information here! But for a better contact experience, mail us at <a href="mailto:goatstone-tech@outlook.com">goatstone-tech@outlook.com</a>.</p>
-<form action="https://forminit.com/f/w0zlgpwpqxp" method="POST" enctype="multipart/form-data">
-<input type="text" name="_gotcha" style="display:none">
-<p><label>Your name<br><input type="text" name="fi-sender-fullName" required size="42"></label></p>
-<p><label>Email<br><input type="text" name="fi-sender-email" required size="42"></label></p>
+<p>Fill this in and your email app will open with everything ready to send. Add photos as attachments in your email.</p>
+<form id="contact-form" action="mailto:goatstone-tech@outlook.com" method="GET">
+<p><label>Your name<br><input type="text" name="name" required size="42"></label></p>
+<p><label>Email<br><input type="text" name="email" required size="42"></label></p>
 <p class="field-error" id="contact-error" hidden></p>
-<p><label>What you have, and where<br><textarea name="fi-text-items" rows="5" cols="44" required></textarea></label></p>
-<div class="drop-zone" id="photo-drop" role="button" tabindex="0" aria-label="Add photos">
-<p>Drag photos here, or <label class="btn" for="photos">choose files</label></p>
-<input type="file" id="photos" name="fi-file-photos[]" accept="image/png, image/jpeg" multiple style="display:none">
-<ul class="file-list" id="photo-list"></ul>
-<p class="drop-note">Photos help us plan the pickup. Up to 10 photos and 10 MB total per message. Large photos are compressed before sending.</p>
-</div>
+<p><label>What you have, and where<br><textarea name="items" rows="5" cols="44" required></textarea></label></p>
 <p><input type="submit" class="btn" value="Send pickup request"></p>
-<p class="field-error" id="form-status" role="status" hidden></p>
 </form>
 <p>Or write to us directly: <a href="mailto:goatstone-tech@outlook.com">goatstone-tech@outlook.com</a></p>
 <h2>What to include</h2>
-<p>A rough count of your devices, and what they are (laptops, desktops, loose drives), and your pickup address. You may email us instead to add photos!</p>
+<p>A rough count of your devices, and what they are (laptops, desktops, loose drives), and your pickup address. Add photos as attachments in your email.</p>
 <h2>We accept</h2>
 <p>Desktops, laptops, phones, tablets, MP3 players, game consoles, keyboards, mice, monitors, SD cards, HDDs, SSDs, USB drives, cables and chargers, and even small CRT screens. We also want musical instruments! Although that is through donation only.</p>
 <h2>We cannot accept</h2>

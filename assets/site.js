@@ -262,7 +262,7 @@
     return row[n];
   }
   function isValidFormat(email) {
-    return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email) && email.indexOf('..') === -1;
+    return /^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}$/.test(email) && email.indexOf('..') === -1;
   }
   function suggestDomain(domain) {
     var best = null, bestDist = 99;

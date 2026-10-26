@@ -682,6 +682,8 @@ details.supporters summary{cursor:pointer;font-family:"Steelfish",serif;font-siz
 /* Goatstone 2026-10-26: section dropdowns on Donate and Data Destruction. Each main header is a details/summary, closed by default, same pattern as More and Supporters. */
 details.section-dropdown{margin:0 0 18px}
 details.section-dropdown summary{cursor:pointer;color:#626262;font:19px/24px "Steelfish",serif;letter-spacing:2px;text-transform:uppercase;margin:0 0 12px}
+details.section-dropdown summary a{color:inherit;text-decoration:none}
+details.section-dropdown summary a:hover{text-decoration:underline}
 details.section-dropdown.title summary{color:#57614e;font-size:29px;line-height:30px;letter-spacing:0;margin-bottom:18px}
 details.section-dropdown summary::-webkit-details-marker{color:#57614e}
 details.section-dropdown[open ] summary{margin-bottom:12px}

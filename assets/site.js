@@ -11,9 +11,11 @@
   window.addEventListener('scroll', onScroll, { passive: true });
 })();
 
-// Goatstone fix 48 2026-10-25: contact form photo drop zone. Clicking the
-// zone or dropping files onto it fills the hidden file input, and the
-// chosen file names are listed. No-ops on pages without the zone.
+// Goatstone fix 48 2026-10-25, updated 2026-10-26: contact form photo drop
+// zone. Clicking the zone or dropping files onto it adds to the hidden
+// file input, and the chosen file names are listed. Files accumulate
+// across picks and drops, up to 10 MB total. No-ops on pages without
+// the zone.
 (function () {
   var zone = document.getElementById('photo-drop');
   if (!zone) {
@@ -21,7 +23,61 @@
   }
   var input = document.getElementById('photos');
   var list = document.getElementById('photo-list');
-  function showFiles(files) {
+  var note = zone.querySelector('.drop-note');
+  var MAX_BYTES = 10 * 1024 * 1024;
+  var store = (typeof DataTransfer !== 'undefined') ? new DataTransfer() : null;
+  function totalBytes() {
+    var total = 0;
+    Array.prototype.forEach.call(store.files, function (file) {
+      total += file.size;
+    });
+    return total;
+  }
+  function showFiles() {
+    list.innerHTML = '';
+    Array.prototype.forEach.call(store.files, function (file) {
+      var li = document.createElement('li');
+      li.textContent = file.name + ' (' + Math.round(file.size / 1024) + ' KB)';
+      list.appendChild(li);
+    });
+    if (note) {
+      if (store.files.length) {
+        note.textContent = store.files.length + (store.files.length === 1 ? ' photo, ' : ' photos, ') + (totalBytes() / 1048576).toFixed(1) + ' MB total. Up to 10 MB total per message.';
+      } else {
+        note.textContent = 'Photos help us plan the pickup. Up to 10 MB total per message.';
+      }
+    }
+  }
+  function addFiles(files) {
+    if (!store) {
+      input.files = files;
+      showFilesFallback(files);
+      return;
+    }
+    var skipped = 0;
+    Array.prototype.forEach.call(files, function (file) {
+      var duplicate = false;
+      Array.prototype.forEach.call(store.files, function (existing) {
+        if (existing.name === file.name && existing.size === file.size && existing.lastModified === file.lastModified) {
+          duplicate = true;
+        }
+      });
+      if (duplicate) {
+        return;
+      }
+      if (totalBytes() + file.size > MAX_BYTES) {
+        skipped += 1;
+        return;
+      }
+      store.items.add(file);
+    });
+    input.files = store.files;
+    showFiles();
+    if (skipped && note) {
+      note.textContent += ' Some photos were left out: the 10 MB total was reached.';
+    }
+  }
+  function showFilesFallback(files) {
     list.innerHTML = '';
     Array.prototype.forEach.call(files, function (file) {
       var li = document.createElement('li');
@@ -45,7 +101,7 @@
     }
   });
   input.addEventListener('change', function () {
-    showFiles(input.files);
+    addFiles(input.files);
   });
   ['dragenter', 'dragover'].forEach(function (evt) {
     zone.addEventListener(evt, function (e) {
@@ -60,7 +116,6 @@
     });
   });
   zone.addEventListener('drop', function (e) {
-    input.files = e.dataTransfer.files;
-    showFiles(input.files);
+    addFiles(e.dataTransfer.files);
   });
 })();

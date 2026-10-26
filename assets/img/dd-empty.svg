@@ -1,0 +1,7 @@
+<svg viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A drive showing zero data left">
+<rect width="600" height="300" fill="#eef1e9"/>
+<rect x="170" y="85" width="260" height="110" rx="10" fill="#ffffff" stroke="#4e5944" stroke-width="5"/>
+<text x="300" y="168" font-family="Arial,sans-serif" font-size="72" font-weight="bold" fill="#b5c1aa" text-anchor="middle">0</text>
+<rect x="210" y="205" width="180" height="18" rx="9" fill="none" stroke="#4e5944" stroke-width="4"/>
+<text x="300" y="248" font-family="Arial,sans-serif" font-size="18" font-weight="bold" letter-spacing="3" fill="#4e5944" text-anchor="middle">NOTHING LEFT</text>
+</svg>

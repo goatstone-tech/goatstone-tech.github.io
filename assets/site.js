@@ -128,3 +128,30 @@
     addFiles(e.dataTransfer.files);
   });
 })();
+
+// Goatstone 2026-10-26: contact form sending state. On submit, the Send
+// button changes to "Sending! Please wait!", grays out, and cannot be
+// clicked again, so the slow FormSubmit wait does not look stuck and the
+// form cannot be sent twice. No-ops on pages without the form.
+(function () {
+  var form = document.querySelector('form[action*="formsubmit.co"]');
+  if (!form) {
+    return;
+  }
+  var button = form.querySelector('input[type="submit"]');
+  if (!button) {
+    return;
+  }
+  var originalText = button.value;
+  form.addEventListener('submit', function () {
+    if (button.disabled) {
+      return;
+    }
+    button.disabled = true;
+    button.value = 'Sending! Please wait!';
+  });
+  window.addEventListener('pageshow', function () {
+    button.disabled = false;
+    button.value = originalText;
+  });
+})();

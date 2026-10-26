@@ -129,31 +129,99 @@
   });
 })();
 
-// Goatstone 2026-10-26: contact form sending state. On submit, the Send
+// Goatstone 2026-10-26: contact form submit via Forminit (Form ID
+// w0zlgpwpqxp, public). AJAX submit, so the page never leaves and the
+// visitor gets the thank-you page only on success. On submit, the Send
 // button changes to "Sending! Please wait!", grays out, and cannot be
-// clicked again, so the slow FormSubmit wait does not look stuck and the
-// form cannot be sent twice. No-ops on pages without the form.
+// clicked again, so the form cannot be sent twice. No-ops on pages
+// without the form.
 (function () {
-  var form = document.querySelector('form[action*="formsubmit.co"]');
+  var FORM_ID = 'w0zlgpwpqxp';
+  var form = document.querySelector('form[action*="forminit.com"]');
   if (!form) {
     return;
   }
   var button = form.querySelector('input[type="submit"]');
+  var statusEl = document.getElementById('form-status');
   if (!button) {
     return;
   }
   var originalText = button.value;
-  form.addEventListener('submit', function () {
+  var sending = false;
+  function showStatus(text) {
+    if (!statusEl) {
+      return;
+    }
+    statusEl.textContent = text;
+    statusEl.hidden = false;
+  }
+  function clearStatus() {
+    if (!statusEl) {
+      return;
+    }
+    statusEl.textContent = '';
+    statusEl.hidden = true;
+  }
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (sending) {
+      return;
+    }
     if (window.goatstoneCheckEmail && !window.goatstoneCheckEmail()) {
       return;
     }
-    if (button.disabled) {
+    if (typeof Forminit === 'undefined' || !Forminit.submit) {
+      showStatus('The form service did not load. Please email goatstone-tech@outlook.com instead.');
       return;
     }
+    var fd = new FormData(form);
+    var nameValue = fd.get('fi-sender-fullName');
+    if (typeof nameValue === 'string') {
+      fd.set('fi-sender-fullName', nameValue.replace(/[\u2018\u2019]/g, "'"));
+    }
+    var totalBytes = 0;
+    var files = form.querySelectorAll('input[type="file"]');
+    for (var i = 0; i < files.length; i++) {
+      for (var j = 0; j < files[i].files.length; j++) {
+        totalBytes += files[i].files[j].size;
+      }
+    }
+    if (totalBytes > 24 * 1024 * 1024) {
+      showStatus('Those photos are over the 24 MB limit. Please send fewer photos.');
+      return;
+    }
+    sending = true;
     button.disabled = true;
     button.value = 'Sending! Please wait!';
+    clearStatus();
+    Forminit.submit(FORM_ID, fd).then(function (result) {
+      var data = result && result.data;
+      var error = result && result.error;
+      if (!error && data && typeof data.hashId === 'string') {
+        window.location.href = 'thank-you.html';
+        return;
+      }
+      var message = 'Something went wrong. Please try again, or email goatstone-tech@outlook.com instead.';
+      if (error && error.code === 'TOO_MANY_REQUESTS') {
+        message = 'Please wait a few seconds and try again.';
+      }
+      if (typeof console !== 'undefined' && console.error) {
+        console.error(error);
+      }
+      showStatus(message);
+    }).catch(function (err) {
+      if (typeof console !== 'undefined' && console.error) {
+        console.error(err);
+      }
+      showStatus('Something went wrong. Please try again, or email goatstone-tech@outlook.com instead.');
+    }).then(function () {
+      sending = false;
+      button.disabled = false;
+      button.value = originalText;
+    });
   });
   window.addEventListener('pageshow', function () {
+    sending = false;
     button.disabled = false;
     button.value = originalText;
   });
@@ -165,11 +233,11 @@
 // like a typo of a common provider (gmial.com for gmail.com) is flagged
 // with a one-click fix, and the sender can still use it as entered.
 (function () {
-  var form = document.querySelector('form[action*="formsubmit.co"]');
+  var form = document.querySelector('form[action*="forminit.com"]');
   if (!form) {
     return;
   }
-  var input = form.querySelector('input[name="contact"]');
+  var input = form.querySelector('input[name="fi-sender-email"]');
   var errorEl = document.getElementById('contact-error');
   if (!input || !errorEl) {
     return;

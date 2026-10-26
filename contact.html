@@ -5,7 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Contact; GOATSTONE TECH</title>
 <link rel="stylesheet" href="assets/lawfirm.css" type="text/css">
-  <script src="assets/site.js?v=5" defer></script>
+  <script src="https://forminit.com/sdk/v1/forminit.js" defer></script>
+  <script src="assets/site.js?v=6" defer></script>
 </head>
 <body>
 <div id="header">
@@ -51,23 +52,20 @@
 <div class="main">
 <h1>Contact</h1>
 <p>You can send a picture with basic information here! But for a better contact experience, mail us at <a href="mailto:goatstone-tech@outlook.com">goatstone-tech@outlook.com</a>.</p>
-<form action="https://formsubmit.co/d176b55bd8a7471cccff267ada86fe60" method="POST" enctype="multipart/form-data">
-<input type="hidden" name="_subject" value="New pickup request from the Goatstone Tech website">
-<input type="hidden" name="_template" value="table">
-<input type="hidden" name="_captcha" value="false">
-<input type="hidden" name="_next" value="https://goatstone-tech.github.io/thank-you.html">
-<input type="text" name="_honey" style="display:none">
-<p><label>Your name<br><input type="text" name="name" required size="42"></label></p>
-<p><label>Email<br><input type="text" name="contact" required size="42"></label></p>
+<form action="https://forminit.com/f/w0zlgpwpqxp" method="POST" enctype="multipart/form-data">
+<input type="text" name="_gotcha" style="display:none">
+<p><label>Your name<br><input type="text" name="fi-sender-fullName" required size="42"></label></p>
+<p><label>Email<br><input type="text" name="fi-sender-email" required size="42"></label></p>
 <p class="field-error" id="contact-error" hidden></p>
-<p><label>What you have, and where<br><textarea name="items" rows="5" cols="44" required></textarea></label></p>
+<p><label>What you have, and where<br><textarea name="fi-text-items" rows="5" cols="44" required></textarea></label></p>
 <div class="drop-zone" id="photo-drop" role="button" tabindex="0" aria-label="Add photos">
 <p>Drag photos here, or <label class="btn" for="photos">choose files</label></p>
-<input type="file" id="photos" name="attachment" accept="image/png, image/jpeg" multiple style="display:none">
+<input type="file" id="photos" name="fi-file-photos[]" accept="image/png, image/jpeg" multiple style="display:none">
 <ul class="file-list" id="photo-list"></ul>
 <p class="drop-note">Photos help us plan the pickup. Up to 10 photos and 10 MB total per message.</p>
 </div>
 <p><input type="submit" class="btn" value="Send pickup request"></p>
+<p class="field-error" id="form-status" role="status" hidden></p>
 </form>
 <p>Or write to us directly: <a href="mailto:goatstone-tech@outlook.com">goatstone-tech@outlook.com</a></p>
 <h2>What to include</h2>

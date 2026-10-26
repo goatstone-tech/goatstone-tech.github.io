@@ -1,0 +1,15 @@
+<svg viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A broken padlock in front of a drive">
+<rect width="600" height="300" fill="#eef1e9"/>
+<path d="M140 85 V99 M133 92 H147" stroke="#4e5944" stroke-width="4" stroke-linecap="round"/>
+<path d="M480 95 V109 M473 102 H487" stroke="#4e5944" stroke-width="4" stroke-linecap="round"/>
+<rect x="170" y="110" width="260" height="90" rx="10" fill="#ffffff" stroke="#4e5944" stroke-width="5"/>
+<circle cx="240" cy="155" r="28" fill="none" stroke="#b5c1aa" stroke-width="6"/>
+<circle cx="240" cy="155" r="6" fill="#4e5944"/>
+<rect x="300" y="130" width="44" height="8" rx="4" fill="#d9e0d2"/>
+<rect x="300" y="150" width="40" height="8" rx="4" fill="#d9e0d2"/>
+<path d="M368 150 V132 a27 27 0 0 1 54 0" fill="none" stroke="#4e5944" stroke-width="8" stroke-linecap="round"/>
+<rect x="350" y="150" width="90" height="70" rx="8" fill="#4e5944"/>
+<polyline points="360,158 370,170 362,180 374,194" fill="none" stroke="#b5c1aa" stroke-width="3" stroke-linecap="round"/>
+<circle cx="395" cy="180" r="8" fill="#ffffff"/>
+<rect x="392" y="184" width="6" height="14" fill="#ffffff"/>
+</svg>

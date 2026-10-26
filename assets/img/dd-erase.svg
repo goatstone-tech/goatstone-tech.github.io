@@ -1,0 +1,13 @@
+<svg viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="An eraser wiping binary data off a drive">
+<rect width="600" height="300" fill="#eef1e9"/>
+<rect x="150" y="95" width="300" height="110" rx="10" fill="#ffffff" stroke="#4e5944" stroke-width="5"/>
+<text x="180" y="140" font-family="monospace" font-size="26" font-weight="bold" fill="#4e5944">0101</text>
+<text x="180" y="175" font-family="monospace" font-size="26" font-weight="bold" fill="#4e5944">1100</text>
+<text x="280" y="140" font-family="monospace" font-size="26" font-weight="bold" fill="#d9e0d2">1010</text>
+<text x="280" y="175" font-family="monospace" font-size="26" font-weight="bold" fill="#d9e0d2">0110</text>
+<g transform="rotate(-18 375 141)">
+<rect x="330" y="120" width="90" height="42" rx="6" fill="#b5c1aa" stroke="#4e5944" stroke-width="4"/>
+<rect x="330" y="120" width="90" height="14" rx="6" fill="#4e5944"/>
+</g>
+<path d="M480 80 V94 M473 87 H487" stroke="#4e5944" stroke-width="4" stroke-linecap="round"/>
+</svg>

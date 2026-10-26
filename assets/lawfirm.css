@@ -679,6 +679,13 @@ details.more-list ul li{margin:0 0 6px}
 .info-card ul li{margin-bottom:8px;font:15px/1.5 "Share Tech",Arial,sans-serif;color:#626262}
 details.supporters{margin:18px 0 0}
 details.supporters summary{cursor:pointer;font-family:"Steelfish",serif;font-size:19px;text-transform:uppercase;color:#57614e}
+/* Goatstone 2026-10-26: section dropdowns on Donate and Data Destruction. Each main header is a details/summary, closed by default, same pattern as More and Supporters. */
+details.section-dropdown{margin:0 0 18px}
+details.section-dropdown summary{cursor:pointer;color:#626262;font:19px/24px "Steelfish",serif;letter-spacing:2px;text-transform:uppercase;margin:0 0 12px}
+details.section-dropdown.title summary{color:#57614e;font-size:29px;line-height:30px;letter-spacing:0;margin-bottom:18px}
+details.section-dropdown summary::-webkit-details-marker{color:#57614e}
+details.section-dropdown[open ] summary{margin-bottom:12px}
+details.section-dropdown h3{margin:0 0 12px}
 .service-list{list-style:none;margin:0;padding:0}
 .concept-map{display:block;width:100%;height:auto;margin:0 0 24px}
 .sidebar .service-area{margin-left:40px}

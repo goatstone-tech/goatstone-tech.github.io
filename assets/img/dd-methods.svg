@@ -1,0 +1,20 @@
+<svg viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Three tiles for Clear, Purge, Destroy">
+<rect width="600" height="300" fill="#eef1e9"/>
+<rect x="55" y="50" width="150" height="150" rx="18" fill="#ffffff" stroke="#4e5944" stroke-width="4"/>
+<rect x="225" y="50" width="150" height="150" rx="18" fill="#ffffff" stroke="#4e5944" stroke-width="4"/>
+<rect x="395" y="50" width="150" height="150" rx="18" fill="#ffffff" stroke="#4e5944" stroke-width="4"/>
+<g transform="rotate(-25 130 115)">
+<rect x="100" y="100" width="60" height="30" rx="5" fill="#b5c1aa" stroke="#4e5944" stroke-width="4"/>
+<rect x="100" y="100" width="60" height="12" rx="5" fill="#4e5944"/>
+</g>
+<path d="M100 158 q10 -8 20 0 t20 0 t20 0" fill="none" stroke="#b5c1aa" stroke-width="4" stroke-linecap="round"/>
+<polygon points="310,85 283,126 303,126 292,166 324,116 304,116" fill="#4e5944"/>
+<rect x="435" y="90" width="70" height="12" rx="3" fill="#3c4636"/>
+<rect x="442" y="102" width="10" height="48" fill="#b5c1aa"/>
+<rect x="460" y="102" width="10" height="36" fill="#b5c1aa"/>
+<rect x="478" y="102" width="10" height="52" fill="#b5c1aa"/>
+<rect x="496" y="102" width="10" height="40" fill="#b5c1aa"/>
+<text x="130" y="236" font-family="Arial,sans-serif" font-size="20" font-weight="bold" letter-spacing="3" fill="#4e5944" text-anchor="middle">CLEAR</text>
+<text x="300" y="236" font-family="Arial,sans-serif" font-size="20" font-weight="bold" letter-spacing="3" fill="#4e5944" text-anchor="middle">PURGE</text>
+<text x="470" y="236" font-family="Arial,sans-serif" font-size="20" font-weight="bold" letter-spacing="3" fill="#4e5944" text-anchor="middle">DESTROY</text>
+</svg>

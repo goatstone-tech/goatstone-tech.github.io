@@ -1,5 +1,5 @@
 // Goatstone home card carousels. One timer per card, 6 seconds per slide.
-// Adapted from the slidein/slideout idea Daniel supplied: the supplied SCSS
+// Adapted from the slidein/slideout idea supplied: the supplied SCSS
 // was a single left-menu scene with radio buttons and no auto advance, so it
 // could not be dropped in as four card carousels. This keeps the slide
 // animation and adds the 6 second auto advance. With one image per card
@@ -21,7 +21,7 @@
 })();
 
 // Card image carousels (S.D.R and Data Destruction). Track slider adapted
-// from the Stylus slider Daniel supplied: a track of slides translated by
+// from the Stylus slider supplied: a track of slides translated by
 // -100% per step, with prev/next arrows and dot indicators. The supplied
 // Stylus is a manual radio-button scene with no auto advance, so this keeps
 // the site's 6 second auto advance and drives the track with JavaScript

@@ -368,7 +368,7 @@ form input[type='text'],form textarea{width:100%;box-sizing:border-box;font-size
 a,button{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
 input,textarea{-webkit-tap-highlight-color:transparent}
 
-/* Goatstone: larger headers (Daniel, 2026-10-23) */
+/* Goatstone: larger headers (2026-10-23) */
 
 /* Goatstone fix batch 2026-10-24: larger header, sticky nav, matching scrollbar, carousel, dropdowns, buttons */
 #header{position:sticky;top:0;z-index:1000}
@@ -378,7 +378,7 @@ input,textarea{-webkit-tap-highlight-color:transparent}
 #header .navigation{margin:20px 0 0}
 #header .navigation li{margin-left:22px}
 #header .navigation li a{font-size:25px;line-height:30px}
-/* Goatstone fix 17 2026-10-24: stylized page scrollbar, adapted from the sample Daniel sent. Wider pill thumb, faint track, clearly visible when idle, solid while scrolling or hovering the bar. */
+/* Goatstone fix 17 2026-10-24: stylized page scrollbar, adapted from the sample supplied. Wider pill thumb, faint track, clearly visible when idle, solid while scrolling or hovering the bar. */
 html{scrollbar-width:auto;scrollbar-color:#7d8a6d #dcdcdc;transition:scrollbar-color .3s ease}
 html:hover{scrollbar-color:#5c6850 #dcdcdc}
 html.is-scrolling{scrollbar-color:#4e5944 #dcdcdc}
@@ -425,7 +425,7 @@ details.section-dropdown h3{margin:0 0 12px}
 .service-list li{margin:0 0 8px;font:15px/1.5 "Share Tech",Arial,sans-serif;color:#626262}
 #adbox .hero-carousel{float:right;width:594px;height:382px;overflow:hidden}
 #adbox .hero-carousel img{width:594px;height:382px;object-fit:cover;float:none}
-/* Goatstone fix 24 2026-10-24: Information page blog cards, adapted from the code Daniel sent. SCSS nesting and variables flattened to plain CSS, blue prime swapped for the site olive, FontAwesome glyphs swapped for plain text. Width fits the page column: the sample 700px would overflow the 600px main column, so cards fill the column instead. */
+/* Goatstone fix 24 2026-10-24: Information page blog cards, adapted from the code supplied. SCSS nesting and variables flattened to plain CSS, blue prime swapped for the site olive, FontAwesome glyphs swapped for plain text. Width fits the page column: the sample 700px would overflow the 600px main column, so cards fill the column instead. */
 .blog-card{display:flex;flex-direction:column;margin:1rem auto 1.6%;box-shadow:0 3px 7px -1px rgba(0,0,0,.1);background:#fff;line-height:1.4;border-radius:5px;overflow:hidden;z-index:0;max-width:100%}
 .blog-card a{color:inherit}
 .blog-card a:hover{color:#4e5944}
